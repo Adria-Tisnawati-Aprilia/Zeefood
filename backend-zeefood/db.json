@@ -1,104 +1,131 @@
 {
-    "best-products":[
-        {
-            "id": 1,
-            "kode": "K-01",
-            "nama": "Sate Ayam",
-            "harga": 15000,
-            "is_ready": true,
-            "gambar": "sate-ayam.jpg"
-        },
-        {
-            "id": 2,
-            "kode": "K-02",
-            "nama": "Lobster",
-            "harga": 40000,
-            "is_ready": true,
-            "gambar": "lobster.jpg"
-        },
-        {
-            "id": 3,
-            "kode": "K-03",
-            "nama": "Ikan Bakar",
-            "harga": 25000,
-            "is_ready": true,
-            "gambar": "ikan-bakar.jpg"
-        }
-    ],
-    "products": [
-        {
-            "id": 1,
-            "kode": "K-01",
-            "nama": "Nasi Rames",
-            "harga": 20000,
-            "is_ready": true,
-            "gambar": "nasi-rames.jpg"
-        },
-        {
-            "id": 2,
-            "kode": "K-02",
-            "nama": "Kentang Goreng",
-            "harga": 15000,
-            "is_ready": true,
-            "gambar": "kentang-goreng.jpg"
-        },
-        {
-            "id": 3,
-            "kode": "K-03",
-            "nama": "Lontong Opor Ayam",
-            "harga": 20000,
-            "is_ready": true,
-            "gambar": "lontong-opor-ayam.jpg"
-        },
-        {
-            "id": 4,
-            "kode": "K-04",
-            "nama": "Udang",
-            "harga": 35000,
-            "is_ready": true,
-            "gambar": "udang.jpg"
-        },
-        {
-            "id": 5,
-            "kode": "K-05",
-            "nama": "Cumi-cumi",
-            "harga": 30000,
-            "is_ready": true,
-            "gambar": "cumi.jpg"
-        },
-        {
-            "id": 6,
-            "kode": "K-06",
-            "nama": "Teripang",
-            "harga": 45000,
-            "is_ready": true,
-            "gambar": "teripang.jpg"
-        },
-        {
-            "id": 7,
-            "kode": "K-07",
-            "nama": "Abalon",
-            "harga": 50000,
-            "is_ready": true,
-            "gambar": "abalon.jpg"
-        },
-        {
-            "id": 8,
-            "kode": "K-08",
-            "nama": "Rumput Laut",
-            "harga": 25000,
-            "is_ready": true,
-            "gambar": "rumput-laut.jpg"
-        },
-        {
-            "id": 9,
-            "kode": "K-09",
-            "nama": "Kepiting",
-            "harga": 30000,
-            "is_ready": true,
-            "gambar": "kepiting.jpg"
-        }
-    ],
-    "keranjang":[],
-    "pesanans":[]
+  "best-products": [
+    {
+      "id": 1,
+      "kode": "K-01",
+      "nama": "Sate Ayam",
+      "harga": 15000,
+      "is_ready": true,
+      "gambar": "sate-ayam.jpg"
+    },
+    {
+      "id": 2,
+      "kode": "K-02",
+      "nama": "Lobster",
+      "harga": 40000,
+      "is_ready": true,
+      "gambar": "lobster.jpg"
+    },
+    {
+      "id": 3,
+      "kode": "K-03",
+      "nama": "Ikan Bakar",
+      "harga": 25000,
+      "is_ready": true,
+      "gambar": "ikan-bakar.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "kode": "K-01",
+      "nama": "Nasi Rames",
+      "harga": 20000,
+      "is_ready": true,
+      "gambar": "nasi-rames.jpg"
+    },
+    {
+      "id": 2,
+      "kode": "K-02",
+      "nama": "Kentang Goreng",
+      "harga": 15000,
+      "is_ready": true,
+      "gambar": "kentang-goreng.jpg"
+    },
+    {
+      "id": 3,
+      "kode": "K-03",
+      "nama": "Lontong Opor Ayam",
+      "harga": 20000,
+      "is_ready": true,
+      "gambar": "lontong-opor-ayam.jpg"
+    },
+    {
+      "id": 4,
+      "kode": "K-04",
+      "nama": "Udang",
+      "harga": 35000,
+      "is_ready": true,
+      "gambar": "udang.jpg"
+    },
+    {
+      "id": 5,
+      "kode": "K-05",
+      "nama": "Cumi-cumi",
+      "harga": 30000,
+      "is_ready": true,
+      "gambar": "cumi.jpg"
+    },
+    {
+      "id": 6,
+      "kode": "K-06",
+      "nama": "Teripang",
+      "harga": 45000,
+      "is_ready": true,
+      "gambar": "teripang.jpg"
+    },
+    {
+      "id": 7,
+      "kode": "K-07",
+      "nama": "Abalon",
+      "harga": 50000,
+      "is_ready": true,
+      "gambar": "abalon.jpg"
+    },
+    {
+      "id": 8,
+      "kode": "K-08",
+      "nama": "Rumput Laut",
+      "harga": 25000,
+      "is_ready": true,
+      "gambar": "rumput-laut.jpg"
+    },
+    {
+      "id": 9,
+      "kode": "K-09",
+      "nama": "Kepiting",
+      "harga": 30000,
+      "is_ready": true,
+      "gambar": "kepiting.jpg"
+    }
+  ],
+  "keranjang": [
+    {
+      "jumlah_pemesanan": "1",
+      "keterangan": "nasi setengah",
+      "products": {
+        "id": 1,
+        "kode": "K-01",
+        "nama": "Nasi Rames",
+        "harga": 20000,
+        "is_ready": true,
+        "gambar": "nasi-rames.jpg"
+      },
+      "id": 1
+    },
+    {
+      "jumlah_pemesanan": "1",
+      "keterangan": "nasi setengah",
+      "products": {
+        "id": 1,
+        "kode": "K-01",
+        "nama": "Nasi Rames",
+        "harga": 20000,
+        "is_ready": true,
+        "gambar": "nasi-rames.jpg"
+      },
+      "id": 2
+    }
+  ],
+  "pesanans": []
 }

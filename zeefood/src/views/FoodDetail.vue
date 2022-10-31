@@ -2,7 +2,7 @@
     <div class="food-detail">
         <NavItem/>
         <div class="container">
-        
+            
             <!-- Breadcrumb-->
             <div class="row mt-5">
                 <div class="col">
@@ -28,21 +28,29 @@
                     <h2><strong> {{ product.nama }}</strong></h2>
                     <hr>
                     <h4>Harga : <strong>Rp. {{ product.harga}}</strong></h4>
-                    <form class="mr-4">
+                    <hr>
+                    <form class="mr-4" v-on:submit.prevent>
                         <div class="form-group">
                             <label for="jumlah_pemesanan">Jumlah Pesan</label>
-                            <input type="number" class="form-control"/>
+                            <input type="number" class="form-control" v-model="pesan.jumlah_pemesanan"/>
                         </div>
                         <div class="form-group">
                             <label for="keterangan">Keterangan</label>
-                            <textarea class="form-control" placeholder="Masukan keterangan"></textarea>
+                            <textarea 
+                            v-model="pesan.keterangan"
+                            class="form-control" 
+                            placeholder="Masukan keterangan">
+                            </textarea>
                         </div>
-                        <button type="submit" class="btn btn-success"><b-icon-cart></b-icon-cart>Pesan</button>
-                    </form>
-                </div>
+                    
+                    <button type="submit" class="btn btn-success" @click="pemesanan">
+                        <b-icon-cart></b-icon-cart> Pesan
+                    </button>
+                </form>
             </div>
         </div>
     </div>
+</div>
 </template>
 
 <script>
@@ -56,13 +64,38 @@ export default {
     },
     data() {
         return {
-            product : {}
+            product : {},
+            pesan : {}
         }
     },
     methods: {
         setProduct(data) {
-            this.product = data
-        }
+            this.product = data;
+        },
+        pemesanan() {
+            if(this.pesan_jumlah.pemesanan) {
+                this.pesan.products = this.product;
+        axios
+        .post("http://localhost:3000/keranjang", this.pesan)
+        .then (() => {
+            this.$router.push({ path: "/keranjang"})
+            this.$toast.success("Berhasil masuk keranjang", {
+                    type : 'success',
+                    position : 'top-right',
+                    duration : 3000,
+                    dismissible : true
+                });
+            })
+            .catch ((err) => console.log(err))
+        } else {
+            this.$toast.error("Isi jumlah pesanan", {
+                    type : 'error',
+                    position : 'top-right',
+                    duration : 3000,
+                    dismissible : true
+                });
+            }
+        },
     },
     mounted() {
         axios
