@@ -37,7 +37,7 @@
         {
             "id": 2,
             "kode": "K-02",
-            "nama": "Kentang Goreeng",
+            "nama": "Kentang Goreng",
             "harga": 15000,
             "is_ready": true,
             "gambar": "kentang-goreng.jpg"
