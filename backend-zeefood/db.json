@@ -25,7 +25,7 @@
             "gambar": "ikan-bakar.jpg"
         }
     ],
-    "product": [
+    "products": [
         {
             "id": 1,
             "kode": "K-01",
@@ -53,7 +53,7 @@
         {
             "id": 4,
             "kode": "K-04",
-            "nama": "udang",
+            "nama": "Udang",
             "harga": 35000,
             "is_ready": true,
             "gambar": "udang.jpg"
@@ -61,10 +61,42 @@
         {
             "id": 5,
             "kode": "K-05",
-            "nama": "cumi",
+            "nama": "Cumi-cumi",
             "harga": 30000,
             "is_ready": true,
             "gambar": "cumi.jpg"
+        },
+        {
+            "id": 6,
+            "kode": "K-06",
+            "nama": "Teripang",
+            "harga": 45000,
+            "is_ready": true,
+            "gambar": "teripang.jpg"
+        },
+        {
+            "id": 7,
+            "kode": "K-07",
+            "nama": "Abalon",
+            "harga": 50000,
+            "is_ready": true,
+            "gambar": "abalon.jpg"
+        },
+        {
+            "id": 8,
+            "kode": "K-08",
+            "nama": "Rumput Laut",
+            "harga": 25000,
+            "is_ready": true,
+            "gambar": "rumput-laut.jpg"
+        },
+        {
+            "id": 9,
+            "kode": "K-09",
+            "nama": "Kepiting",
+            "harga": 30000,
+            "is_ready": true,
+            "gambar": "kepiting.jpg"
         }
     ],
     "keranjang":[],
