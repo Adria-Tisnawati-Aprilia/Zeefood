@@ -99,33 +99,6 @@
       "gambar": "kepiting.jpg"
     }
   ],
-  "keranjang": [
-    {
-      "jumlah_pemesanan": "1",
-      "keterangan": "nasi setengah",
-      "products": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Nasi Rames",
-        "harga": 20000,
-        "is_ready": true,
-        "gambar": "nasi-rames.jpg"
-      },
-      "id": 1
-    },
-    {
-      "jumlah_pemesanan": "1",
-      "keterangan": "nasi setengah",
-      "products": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Nasi Rames",
-        "harga": 20000,
-        "is_ready": true,
-        "gambar": "nasi-rames.jpg"
-      },
-      "id": 2
-    }
-  ],
+  "keranjang": [],
   "pesanans": []
 }

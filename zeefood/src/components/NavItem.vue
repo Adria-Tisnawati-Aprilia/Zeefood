@@ -39,6 +39,7 @@ export default {
         jumlah_pesanans: []
         }
     },
+    props: ['updateKeranjang'],
     methods: {
         setJumlah(data) {
             this.jumlah_pesanans = data

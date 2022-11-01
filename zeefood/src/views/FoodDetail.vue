@@ -4,7 +4,7 @@
         <div class="container">
             
             <!-- Breadcrumb-->
-            <div class="row mt-5">
+            <div class="row mt-4">
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -12,7 +12,7 @@
                                 <router-link to="/" class="text-dark">Home</router-link>
                             </li>
                             <li class="breadcrumb-item">
-                                <router-link to="/foods" class="text-dark">Food</router-link>
+                                <router-link to="/foods" class="text-dark">Foods</router-link>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">Food Order</li>
                         </ol>
@@ -29,7 +29,7 @@
                     <hr>
                     <h4>Harga : <strong>Rp. {{ product.harga}}</strong></h4>
                     <hr>
-                    <form class="mr-4" v-on:submit.prevent>
+                    <form class="mt-4" v-on:submit.prevent>
                         <div class="form-group">
                             <label for="jumlah_pemesanan">Jumlah Pesan</label>
                             <input type="number" class="form-control" v-model="pesan.jumlah_pemesanan"/>
@@ -73,10 +73,10 @@ export default {
             this.product = data;
         },
         pemesanan() {
-            if(this.pesan_jumlah.pemesanan) {
+            if(this.pesan.jumlah.pemesanan) {
                 this.pesan.products = this.product;
         axios
-        .post("http://localhost:3000/keranjang", this.pesan)
+        .post("http://localhost:3000/keranjangs", this.pesan)
         .then (() => {
             this.$router.push({ path: "/keranjang"})
             this.$toast.success("Berhasil masuk keranjang", {
@@ -101,7 +101,7 @@ export default {
         axios
         .get("http://localhost:3000/products/"+this.$route.params.id)
         .then((response) => this.setProduct(response.data))
-        .catch((error) => console.log(error))
+        .catch((error) => console.log(error));
     },
 };
 </script>
