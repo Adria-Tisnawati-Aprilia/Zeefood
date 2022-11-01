@@ -37,20 +37,20 @@
                         <div class="form-group">
                             <label for="keterangan">Keterangan</label>
                             <textarea 
-                            v-model="pesan.keterangan"
-                            class="form-control" 
-                            placeholder="Masukan keterangan">
+                                v-model="pesan.keterangan"
+                                class="form-control" 
+                                placeholder="Masukan keterangan">
                             </textarea>
                         </div>
                     
-                    <button type="submit" class="btn btn-success" @click="pemesanan">
-                        <b-icon-cart></b-icon-cart> Pesan
-                    </button>
-                </form>
+                        <button type="submit" class="btn btn-success" @click="pemesanan">
+                            <b-icon-cart></b-icon-cart> Pesan
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </template>
 
 <script>
