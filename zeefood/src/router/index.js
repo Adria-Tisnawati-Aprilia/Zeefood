@@ -27,7 +27,7 @@ const routes = [
   },
   {
     path: '/keranjang',
-    name: 'KeranJang',
+    name: 'Keranjang',
     component: KeranJang
   },
   {

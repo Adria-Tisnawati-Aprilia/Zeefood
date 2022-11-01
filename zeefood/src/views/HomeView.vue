@@ -5,11 +5,16 @@
       <HeroF/>
       
       <div class="row mt-4">
-        <div class="row">
-          <h2>Best <strong>Foodies</strong></h2>
+        <div class="col">
+          <h2>
+            Best
+            <strong>Foodies</strong>
+          </h2>
         </div>
         <div class="col">
-          <router-link to="/foods" class="btn btn-success float-right"><b-icon-eye></b-icon-eye> Lihat Semua</router-link>
+          <router-link to="/foods" class="btn btn-success float-right">
+            <b-icon-eye></b-icon-eye>Lihat Semua
+          </router-link>
         </div>
       </div>
       
@@ -18,7 +23,6 @@
           <CardProduct :product="product"/>
         </div>
       </div>
-      
     </div>
   </div>
 </template>
@@ -35,17 +39,17 @@ export default {
   components: {
     NavItem,
     HeroF,
-    CardProduct
+    CardProduct,
   },
   data() {
     return {
-      products: []
-    }
+      products: [],
+    };
   },
   methods: {
     setProducts(data) {
-      this.products = data
-    }
+      this.products = data;
+    },
   },
   mounted() {
     axios

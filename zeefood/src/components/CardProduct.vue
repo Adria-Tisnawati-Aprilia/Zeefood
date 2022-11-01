@@ -15,7 +15,7 @@
 export default {
     name : 'CardProduct',
     props : ['product']
-}
+};
 </script>
 
 <style>

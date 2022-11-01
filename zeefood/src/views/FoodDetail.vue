@@ -25,9 +25,14 @@
                     <img :src="'../assets/images/'+ product.gambar" class="img-fluid shadow"/>
                 </div>
                 <div class="col-md-6">
-                    <h2><strong> {{ product.nama }}</strong></h2>
-                    <hr>
-                    <h4>Harga : <strong>Rp. {{ product.harga}}</strong></h4>
+                    <h2>
+                        <strong> {{ product.nama }}</strong>
+                    </h2>
+                    <hr/>
+                    <h4>
+                        Harga : 
+                        <strong>Rp. {{ product.harga}}</strong>
+                    </h4>
                     <hr>
                     <form class="mt-4" v-on:submit.prevent>
                         <div class="form-group">
@@ -65,41 +70,42 @@ export default {
     data() {
         return {
             product : {},
-            pesan : {}
-        }
+            pesan : {},
+        };
     },
     methods: {
         setProduct(data) {
             this.product = data;
         },
         pemesanan() {
-            if(this.pesan.jumlah.pemesanan) {
+            if(this.pesan.jumlah_pemesanan) {
                 this.pesan.products = this.product;
-        axios
-        .post("http://localhost:3000/keranjangs", this.pesan)
-        .then (() => {
-            this.$router.push({ path: "/keranjang"})
-            this.$toast.success("Berhasil masuk keranjang", {
-                    type : 'success',
-                    position : 'top-right',
-                    duration : 3000,
-                    dismissible : true
-                });
-            })
-            .catch ((err) => console.log(err))
-        } else {
-            this.$toast.error("Isi jumlah pesanan", {
-                    type : 'error',
-                    position : 'top-right',
-                    duration : 3000,
-                    dismissible : true
-                });
+            axios
+            .post("http://localhost:3000/keranjangs", this.pesan)
+            .then (() => {
+                this.$router.push({ path: "/keranjang"})
+                this.$toast.success("Berhasil masuk keranjang", {
+                        type : 'success',
+                        position : 'top-right',
+                        duration : 3000,
+                        dismissible : true
+                    });
+                })
+                .catch ((err) => console.log(err))
+            } else {
+                this.$toast.error("Isi jumlah pesanan", {
+                        type : 'error',
+                        position : 'top-right',
+                        duration : 3000,
+                        dismissible : true
+                    }
+                );
             }
         },
     },
     mounted() {
         axios
-        .get("http://localhost:3000/products/"+this.$route.params.id)
+        .get("http://localhost:3000/products/"+ this.$route.params.id)
         .then((response) => this.setProduct(response.data))
         .catch((error) => console.log(error));
     },

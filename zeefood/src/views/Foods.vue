@@ -2,7 +2,7 @@
     <div>
         <NavItem/>
         <div class="container">
-            <div class="row">
+            <div class="row mt-4">
                 <div class="col">
                     <h2>Daftar <Strong>Menu</Strong></h2>
                 </div>
@@ -73,7 +73,7 @@ export default {
         .then((response) => this.setProducts(response.data))
         .catch((error) => console.log(error))
     },
-}
+};
 </script>
 
 <style>

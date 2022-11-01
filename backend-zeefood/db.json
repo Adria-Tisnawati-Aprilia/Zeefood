@@ -99,6 +99,159 @@
       "gambar": "kepiting.jpg"
     }
   ],
-  "keranjang": [],
-  "pesanans": []
+  "keranjangs": [
+    {
+      "jumlah_pemesanan": "1",
+      "keterangan": "asin",
+      "products": {
+        "id": 6,
+        "kode": "K-06",
+        "nama": "Teripang",
+        "harga": 45000,
+        "is_ready": true,
+        "gambar": "teripang.jpg"
+      },
+      "id": 4
+    },
+    {
+      "jumlah_pemesanan": "1",
+      "keterangan": "asam",
+      "products": {
+        "id": 4,
+        "kode": "K-04",
+        "nama": "Udang",
+        "harga": 35000,
+        "is_ready": true,
+        "gambar": "udang.jpg"
+      },
+      "id": 5
+    },
+    {
+      "jumlah_pemesanan": "1",
+      "keterangan": "sabi",
+      "products": {
+        "id": 1,
+        "kode": "K-01",
+        "nama": "Nasi Rames",
+        "harga": 20000,
+        "is_ready": true,
+        "gambar": "nasi-rames.jpg"
+      },
+      "id": 6
+    },
+    {
+      "jumlah_pemesanan": "1",
+      "keterangan": "erty",
+      "products": {
+        "id": 1,
+        "kode": "K-01",
+        "nama": "Nasi Rames",
+        "harga": 20000,
+        "is_ready": true,
+        "gambar": "nasi-rames.jpg"
+      },
+      "id": 7
+    }
+  ],
+  "pesanans": [
+    [],
+    {
+      "nama": "adria",
+      "noMeja": "2",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "1",
+          "keterangan": "dfg",
+          "products": {
+            "id": 1,
+            "kode": "K-01",
+            "nama": "Nasi Rames",
+            "harga": 20000,
+            "is_ready": true,
+            "gambar": "nasi-rames.jpg"
+          },
+          "id": 1
+        },
+        {
+          "jumlah_pemesanan": "2",
+          "keterangan": "pedes",
+          "products": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Lontong Opor Ayam",
+            "harga": 20000,
+            "is_ready": true,
+            "gambar": "lontong-opor-ayam.jpg"
+          },
+          "id": 2
+        },
+        {
+          "jumlah_pemesanan": "1",
+          "keterangan": "manis",
+          "products": {
+            "id": 5,
+            "kode": "K-05",
+            "nama": "Cumi-cumi",
+            "harga": 30000,
+            "is_ready": true,
+            "gambar": "cumi.jpg"
+          },
+          "id": 3
+        },
+        {
+          "jumlah_pemesanan": "1",
+          "keterangan": "asin",
+          "products": {
+            "id": 6,
+            "kode": "K-06",
+            "nama": "Teripang",
+            "harga": 45000,
+            "is_ready": true,
+            "gambar": "teripang.jpg"
+          },
+          "id": 4
+        },
+        {
+          "jumlah_pemesanan": "1",
+          "keterangan": "asam",
+          "products": {
+            "id": 4,
+            "kode": "K-04",
+            "nama": "Udang",
+            "harga": 35000,
+            "is_ready": true,
+            "gambar": "udang.jpg"
+          },
+          "id": 5
+        },
+        {
+          "jumlah_pemesanan": "1",
+          "keterangan": "sabi",
+          "products": {
+            "id": 1,
+            "kode": "K-01",
+            "nama": "Nasi Rames",
+            "harga": 20000,
+            "is_ready": true,
+            "gambar": "nasi-rames.jpg"
+          },
+          "id": 6
+        },
+        {
+          "jumlah_pemesanan": "1",
+          "keterangan": "erty",
+          "products": {
+            "id": 1,
+            "kode": "K-01",
+            "nama": "Nasi Rames",
+            "harga": 20000,
+            "is_ready": true,
+            "gambar": "nasi-rames.jpg"
+          },
+          "id": 7
+        }
+      ],
+      "id": 2
+    }
+  ]
 }

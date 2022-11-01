@@ -50,7 +50,7 @@ export default {
     },
     mounted() {
         axios
-        .get("http://localhost:3000/keranjang")
+        .get("http://localhost:3000/keranjangs")
         .then((response) => this.setJumlah(response.data))
         .catch((error) => console.log(error))
     },

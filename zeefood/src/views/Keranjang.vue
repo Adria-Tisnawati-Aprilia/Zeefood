@@ -2,6 +2,7 @@
     <div class="keranjang">
         <NavItem :updateKeranjang="keranjangs"/>
         <div class="container">
+            <!-- Breadcrumb -->
             <div class="row mt-4">
                 <div class="col">
                     <nav aria-label="breadcrumb">
@@ -37,9 +38,13 @@
                             </thead>
                             <tbody>
                                 <tr v-for="(keranjang, index) in keranjangs" :key="keranjang.id" >
-                                    <th>{{ index + id }}</th>
+                                    <th>{{ index + 1 }}</th>
                                     <td>
-                                        <img :src="'../assets/images/'+ keranjang.products.gambar" class="img-fluid shadow" width="250"/>
+                                        <img 
+                                            :src="'../assets/images/'+ keranjang.product.gambar" 
+                                            class="img-fluid shadow" 
+                                            width="250"
+                                        />
                                     </td>
                                     <td><strong>{{ keranjang.products.nama }}</strong>></td>
                                     <td>
@@ -71,7 +76,7 @@
             </div>
             
             <!-- Form Checkout -->
-            <div class="row justify-content-right">
+            <div class="row justify-content-end">
                 <div class="col md-4">
                     <form class="mt-4" v-on:submit.prevent>
                         <div class="form-group">
@@ -89,7 +94,6 @@
                     </form>
                 </div>
             </div>
-            
         </div>
     </div>
 </template>
@@ -106,12 +110,12 @@ export default {
     data() {
         return {
             keranjangs : [],
-            pesan : []
-        }
+            pesan : {},
+        };
     },
     methods: {
         setKeranjangs(data) {
-            this.keranjang = data;
+            this.keranjangs = data;
         },
         hapusKeranjang(id) {
             axios
@@ -134,7 +138,7 @@ export default {
         },
         checkout() {
             if(this.pesan.nama && this.pesan.noMeja) {
-                
+            
                 this.pesan.keranjangs = this.keranjangs;
                 axios
                 .post("http://localhost:3000/pesanans", this.pesan)
@@ -142,21 +146,20 @@ export default {
                     
                     // Hapus semua keranjang
                     this.keranjangs.map(function(item) {
-                        axios
-                .delete("http://localhost:3000/keranjangs/"+ item.id) 
-                .catch((error) => console.log(error));
-                    })
-                    
-                    this.$router.push({ path : "/pesanan-sukses"})
+                        return axios
+                            .delete("http://localhost:3000/keranjangs/"+ item.id) 
+                            .catch((error) => console.log(error));
+                    });
+                            
+                    this.$router.push({ path : "/pesanan-sukses"});
                     this.$toast.success("Berhasil dipesan", {
-                            type : 'success',
-                            position : 'top-right',
-                            duration : 3000,
-                            dismissible : true
-                        });
-                    })
+                        type : 'success',
+                        position : 'top-right',
+                        duration : 3000,
+                        dismissible : true,
+                    });
+                })
                 .catch ((err) => console.log(err));
-                
             } else {
                 this.$toast.error("Nama dan Nomor Meja harus diisi", {
                     type : 'error',
@@ -165,7 +168,7 @@ export default {
                     dismissible : true
                 });
             }
-        }
+        },
     },
     mounted() {
         axios
@@ -176,11 +179,11 @@ export default {
     computed: {
         totalHarga() {
             return this.keranjangs.reduce(function(items, data) {
-                return items+(data.product.harga*data.jumlah_pemesanan)
-            }, 0)
-        }
-    }
-}
+                return items + data.products.harga * data.jumlah_pemesanan;
+            }, 0);
+        },
+    },
+};
 </script>
 
 <style>
