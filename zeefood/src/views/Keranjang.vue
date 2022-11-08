@@ -41,7 +41,7 @@
                                     <th>{{ index + 1 }}</th>
                                     <td>
                                         <img 
-                                            :src="'../assets/images/'+ keranjang.product.gambar" 
+                                            :src="'../assets/images/'+ keranjang.products.gambar" 
                                             class="img-fluid shadow" 
                                             width="250"
                                         />
